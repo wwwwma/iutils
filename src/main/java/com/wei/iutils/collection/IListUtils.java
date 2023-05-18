@@ -2,7 +2,9 @@ package com.wei.iutils.collection;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
 
 public class IListUtils {
@@ -23,5 +25,18 @@ public class IListUtils {
         }
         return res;
     }
+
+    public static <I,T> Set<T> attributeSet(List<I> list, Function<I,T> action){
+        Set<T> res = new HashSet<>();
+        if (null == list || list.size() == 0) return res;
+        for (I o : list) {
+            if (o != null) res.add(action.apply(o));
+        }
+        return res;
+    }
+
+//    public static <T,R extends Comparable<R>> boolean attributeContain(List<T> list, Function<T,Boolean> action){
+//
+//    }
 
 }
