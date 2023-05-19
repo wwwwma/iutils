@@ -11,9 +11,9 @@ public class IWordRender {
 
     private String template;
 
-    private Configure config;
-
     private Object params;
+
+    private Configure config;
 
     public IWordRender() {
     }

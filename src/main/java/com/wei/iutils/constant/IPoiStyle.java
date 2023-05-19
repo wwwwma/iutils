@@ -1,4 +1,4 @@
-package com.wei.iutils.poi.style;
+package com.wei.iutils.constant;
 
 import com.deepoove.poi.data.style.ParagraphStyle;
 import com.deepoove.poi.data.style.Style;
